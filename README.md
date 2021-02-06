@@ -8,7 +8,7 @@ The core file `my_RBM.m` train a RBM with easily customizable parameters, and pr
 
 It also store in the `t_end` variable the training time.
 
-It requires the support files `compute_gradient.m`, `rbm_CD_k.m`, `training.m`, which includes the main functions for the training process.
+It requires the support files `compute_gradient.m`, `rbm_CD_k.m`, `training.m`, that include the main functions for the training process.
 
 In `test_performance.m`, a big nested loop is coded to try different combinations of hyper-parameters.
 
