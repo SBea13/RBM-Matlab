@@ -11,3 +11,5 @@ It also store in the `t_end` variable the training time.
 It requires the support files `compute_gradient.m`, `rbm_CD_k.m`, `training.m`, which includes the main functions for the training process.
 
 In `test_performance.m`, a big nested loop is coded to try different combinations of hyper-parameters.
+
+The datasets used for training and testing are included in the `MNIST_data.rar`. The `.mat` files contain the best performing network's parameters.
