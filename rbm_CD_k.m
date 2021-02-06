@@ -8,7 +8,7 @@ function [h0, v0, vk, hk] = rbm_CD_k(Ws, a, b, cd_k, x)
     a  = repmat(a, 1, batch_size);
     
     % clamp training vector to visible units
-    v0 = x; % > rand(Ni,1);
+    v0 = x; 
     
     % update hidden units
     p_h0v0 = sigmoid(Ws' * v0 + b);
@@ -20,7 +20,7 @@ function [h0, v0, vk, hk] = rbm_CD_k(Ws, a, b, cd_k, x)
     for k = 1:cd_k
         % update visible units to get reconstruction
         p_vkhk = sigmoid(Ws * hk + a);
-        vk = p_vkhk; % > rand(Ni, 1);
+        vk = p_vkhk; 
         
         % update hidden units again
         p_hkvk = sigmoid(Ws' * vk + b);
@@ -28,8 +28,6 @@ function [h0, v0, vk, hk] = rbm_CD_k(Ws, a, b, cd_k, x)
         
     end
     
-    % when computing gradient, we can use probabilities
-    % for hidden units as well (beacuse Hinton says so)
     hk = p_hkvk;
     h0 = p_h0v0;
 end

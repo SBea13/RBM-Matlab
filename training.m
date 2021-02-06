@@ -9,7 +9,6 @@ function [Ws, a, b, errors] = training(X, Ws, a, b, cd_k, eta, alpha, alpha_end,
 
     % batch data and shuffle them
     n_batches = ceil(Nd/batch_size);
-    %batchdata = zeros(batch_size, Ni, n_batches);
     
     % %% Training process - epoch computation
     while true
